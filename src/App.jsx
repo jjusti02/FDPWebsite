@@ -45,7 +45,7 @@ function App() {
       ],
     },
     {
-      title: "AI & Retail Optimization Solutions",
+      title: "AI & Retail Optimization Solutions: Onebeat",
       items: [
         "Inventory optimization",
         "Revenue enhancement strategies",
