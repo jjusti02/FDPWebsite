@@ -91,6 +91,8 @@ function App() {
     "Kappa",
     "Kizik",
     "Callaway Golf Apparel",
+    "K-Swiss",
+    "And more...",
   ];
 
   const markets = [
