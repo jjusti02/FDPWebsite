@@ -5,6 +5,7 @@
   background: #f7f8fa;
   line-height: 1.5;
   font-weight: 400;
+  --primary-green: #305A5C;
 }
 
 * {
@@ -67,8 +68,13 @@ a {
 }
 
 .nav-links a {
-  color: #445065;
+  color: var(--primary-green);
   font-size: 0.95rem;
+}
+
+.nav-links .button {
+  background: var(--primary-green);
+  color: white;
 }
 
 .hero {
@@ -89,7 +95,7 @@ a {
   letter-spacing: 0.12em;
   font-size: 0.78rem;
   font-weight: 700;
-  color: #355d93;
+  color: var(--primary-green);
   margin-bottom: 0.8rem;
 }
 
@@ -105,6 +111,7 @@ h1 {
   font-size: clamp(2.4rem, 5vw, 4.2rem);
   line-height: 1.05;
   margin-bottom: 1rem;
+  color: var(--primary-green);
 }
 
 h2 {
@@ -144,11 +151,13 @@ h4 {
   flex-wrap: wrap;
 }
 
+
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #142132;
+  background: var(--primary-green);
   color: white;
   padding: 0.9rem 1.15rem;
   border-radius: 999px;
@@ -169,6 +178,7 @@ h4 {
 
 .button-small {
   padding: 0.65rem 1rem;
+  
 }
 
 .hero-card,
@@ -178,6 +188,10 @@ h4 {
   border: 1px solid #e5e7eb;
   border-radius: 20px;
   box-shadow: 0 12px 32px rgba(20, 33, 50, 0.05);
+}
+
+h1,h2,h3,h4 {
+  color: var(--primary-green);
 }
 
 .hero-card {
@@ -295,7 +309,7 @@ h4 {
 
 .role {
   font-weight: 700;
-  color: #355d93;
+  color: var(--primary-green);
   margin-bottom: 1rem;
 }
 
@@ -399,4 +413,25 @@ h4 {
   border-radius: 20px;
   border: 1px solid #d7e0ea;
   object-fit: cover;
+}
+
+.brand-link {
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.brand-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.brand-role {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 4px;
 }

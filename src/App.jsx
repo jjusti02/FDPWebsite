@@ -56,7 +56,28 @@ function App() {
     },
   ];
 
-  const brandLogos = ["OOFOS", "Feetures", "Superfeet", "Goodr"];
+  const brandLogos = [
+    {
+      name: "OOFOS",
+      url: "https://www.oofos.com",
+      role: "LATAM & Canada",
+    },
+    {
+      name: "Feetures",
+      url: "https://feetures.com",
+      role: "LATAM",
+    },
+    {
+      name: "Superfeet",
+      url: "https://www.superfeet.com",
+      role: "LATAM",
+    },
+    {
+      name: "Goodr",
+      url: "https://goodr.com",
+      role: "LATAM",
+    },
+  ];
 
   const additionalBrands = [
     "Altra",
@@ -115,7 +136,7 @@ function App() {
     },
     {
       title: "E-commerce & Marketplace",
-      text: "Digital retail and omnichannel expansion strategies.",
+      text: "Digital retail and omnichannel expansion.",
     },
   ];
 
@@ -126,7 +147,7 @@ function App() {
     },
     {
       title: "Regional Expertise",
-      text: "Extensive knowledge of Latin American markets and strong experience supporting brand development in Canada.",
+      text: "Extensive knowledge of Latin American markets and experience supporting brand development in Canada.",
     },
     {
       title: "Hands-On Commercial Leadership",
@@ -203,7 +224,7 @@ function App() {
           <div className="container">
             <div className="section-heading">
               <p className="eyebrow">What We Do</p>
-              <h2>Practical support for international growth</h2>
+              <h2>Driving International Expansion</h2>
               <p>
                 FDP helps brands and distributors enter new markets, build the
                 right partnerships, and execute growth with discipline.
@@ -229,7 +250,7 @@ function App() {
           <div className="container">
             <div className="section-heading">
               <p className="eyebrow">Who We Help</p>
-              <h2>Industry and market expertise</h2>
+              <h2>Industry and Market Expertise</h2>
               <p>
                 FDP specializes in helping brands and distributors grow across
                 complex international markets by identifying the right partners,
@@ -247,8 +268,7 @@ function App() {
                   ))}
                 </ul>
 
-                <h4>Latin America Experience</h4>
-                <p>{countries.join(" • ")}</p>
+                
               </div>
 
               <div className="card">
@@ -270,7 +290,7 @@ function App() {
           <div className="container">
             <div className="section-heading">
               <p className="eyebrow">Clients</p>
-              <h2>Selected brand experience</h2>
+              <h2>Selected Brand Portfolio</h2>
               <p>
                 FDP currently supports and collaborates with leading
                 international brands through distributor development, regional
@@ -280,10 +300,17 @@ function App() {
             </div>
 
             <div className="logo-grid">
-              {brandLogos.map((brand) => (
-                <div key={brand} className="logo-card">
-                  {brand}
-                </div>
+            {brandLogos.map((brand) => (
+                <a
+                  key={brand.name}
+                  href={brand.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="logo-card brand-link"
+                >
+                  <div className="brand-name">{brand.name}</div>
+                  <div className="brand-role">{brand.role}</div>
+                </a>
               ))}
             </div>
 
