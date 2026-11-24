@@ -913,59 +913,18 @@ h4 {
   stroke-width: 2.6;
 }
 
-/* Core services (1–3): colored top bar and stronger lift */
-.service-card:not(.is-secondary) {
+/* All service cards: colored top bar and lift */
+.service-card {
   box-shadow: var(--shadow-md);
 }
 
-.service-card:not(.is-secondary)::before {
+.service-card::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
   height: 5px;
   background: var(--accent);
   z-index: 1;
-}
-
-/* Secondary service (Onebeat): quieter, flatter treatment */
-.service-card.is-secondary {
-  background: #f3f6f4;
-  border-color: var(--line);
-  box-shadow: none;
-}
-
-.service-card.is-secondary::after {
-  display: none;
-}
-
-.service-card.is-secondary .icon-badge {
-  background: #e3eae8;
-  color: var(--muted);
-}
-
-.service-card.is-secondary h3 {
-  color: #3d5654;
-  font-weight: 600;
-}
-
-.service-card.is-secondary .check-list li {
-  color: #6b7f7d;
-  font-size: 0.94rem;
-}
-
-.service-card.is-secondary .check-list svg {
-  background: #e3eae8;
-  color: var(--muted);
-}
-
-.service-card.is-secondary .service-num {
-  opacity: 0.25;
-}
-
-.service-card.is-secondary:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
-  border-color: #cfdcd8;
 }
 
 /* ---------- Who we help ---------- */

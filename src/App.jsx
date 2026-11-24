@@ -156,7 +156,6 @@ const services = [
     title: "AI & Retail Optimization Solutions: Onebeat",
     icon: "sparkle",
     accent: "sky",
-    secondary: true,
     items: [
       "Inventory optimization",
       "Revenue enhancement strategies",
@@ -541,9 +540,7 @@ function App() {
               {services.map((service, index) => (
                 <article
                   key={service.title}
-                  className={`service-card accent-${service.accent}${
-                    service.secondary ? " is-secondary" : ""
-                  } reveal`}
+                  className={`service-card accent-${service.accent} reveal`}
                   style={{ "--delay": `${index * 80}ms` }}
                 >
                   <div className="service-top">
