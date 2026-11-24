@@ -156,7 +156,7 @@ const services = [
     title: "AI & Retail Optimization Solutions: Onebeat",
     icon: "sparkle",
     accent: "sky",
-    featured: true,
+    secondary: true,
     items: [
       "Inventory optimization",
       "Revenue enhancement strategies",
@@ -468,10 +468,6 @@ function App() {
 
           <div className="container hero-grid">
             <div className="hero-copy">
-              <p className="pill rise">
-                <span className="pill-dot" />
-                International brand &amp; distributor development
-              </p>
               <h1 className="rise" style={{ "--delay": "80ms" }}>
                 Expand your brand with the right{" "}
                 <span className="highlight">partners</span>,{" "}
@@ -546,7 +542,7 @@ function App() {
                 <article
                   key={service.title}
                   className={`service-card accent-${service.accent}${
-                    service.featured ? " is-featured" : ""
+                    service.secondary ? " is-secondary" : ""
                   } reveal`}
                   style={{ "--delay": `${index * 80}ms` }}
                 >
