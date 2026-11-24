@@ -312,9 +312,9 @@ const tickerItems = [
 ];
 
 const navLinks = [
+  { href: "#clients", label: "Clients" },
   { href: "#services", label: "What We Do" },
   { href: "#who-we-help", label: "Who We Help" },
-  { href: "#clients", label: "Clients" },
   { href: "#about", label: "About" },
 ];
 
@@ -528,6 +528,64 @@ function App() {
           </div>
         </div>
 
+        {/* ---------- Clients ---------- */}
+        <section id="clients" className="section section-tint">
+          <div className="container">
+            <SectionHeading eyebrow="Clients" title="Selected Brand Portfolio">
+              FDP currently supports and collaborates with leading international
+              brands through distributor development, regional growth strategy,
+              commercial planning, and long-term market expansion.
+            </SectionHeading>
+
+            <div className="brand-bento">
+              {brands.map((brand, index) => (
+                <a
+                  key={brand.name}
+                  href={brand.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`brand-tile brand-tile-${index + 1} reveal`}
+                  style={{ "--delay": `${index * 70}ms` }}
+                >
+                  <img
+                    src={brand.image}
+                    alt={brand.alt}
+                    loading="lazy"
+                    style={{ objectPosition: brand.position }}
+                    className={brand.brighten ? "is-brightened" : undefined}
+                  />
+                  <span className="brand-shade" aria-hidden="true" />
+                  <span className="brand-role-chip">{brand.role}</span>
+                  <span className="brand-meta">
+                    <span className="brand-tile-name">{brand.name}</span>
+                    <span className="brand-visit">
+                      Visit site <Icon name="arrowUpRight" size={16} />
+                    </span>
+                  </span>
+                </a>
+              ))}
+            </div>
+
+            <div className="engagement-card reveal">
+              <div>
+                <h3>Additional Industry Engagement</h3>
+                <p>
+                  Ignacio has also worked with or engaged with a wide range of
+                  international brands on behalf of clients and distributor
+                  partners as part of brand development initiatives, distributor
+                  introductions, and market exploration projects.
+                </p>
+              </div>
+              <ul className="tag-cloud">
+                {additionalBrands.map((brand) => (
+                  <li key={brand}>{brand}</li>
+                ))}
+                <li className="tag-more">And more…</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* ---------- Services ---------- */}
         <section id="services" className="section">
           <div className="container">
@@ -615,64 +673,6 @@ function App() {
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ---------- Clients ---------- */}
-        <section id="clients" className="section">
-          <div className="container">
-            <SectionHeading eyebrow="Clients" title="Selected Brand Portfolio">
-              FDP currently supports and collaborates with leading international
-              brands through distributor development, regional growth strategy,
-              commercial planning, and long-term market expansion.
-            </SectionHeading>
-
-            <div className="brand-bento">
-              {brands.map((brand, index) => (
-                <a
-                  key={brand.name}
-                  href={brand.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`brand-tile brand-tile-${index + 1} reveal`}
-                  style={{ "--delay": `${index * 70}ms` }}
-                >
-                  <img
-                    src={brand.image}
-                    alt={brand.alt}
-                    loading="lazy"
-                    style={{ objectPosition: brand.position }}
-                    className={brand.brighten ? "is-brightened" : undefined}
-                  />
-                  <span className="brand-shade" aria-hidden="true" />
-                  <span className="brand-role-chip">{brand.role}</span>
-                  <span className="brand-meta">
-                    <span className="brand-tile-name">{brand.name}</span>
-                    <span className="brand-visit">
-                      Visit site <Icon name="arrowUpRight" size={16} />
-                    </span>
-                  </span>
-                </a>
-              ))}
-            </div>
-
-            <div className="engagement-card reveal">
-              <div>
-                <h3>Additional Industry Engagement</h3>
-                <p>
-                  Ignacio has also worked with or engaged with a wide range of
-                  international brands on behalf of clients and distributor
-                  partners as part of brand development initiatives, distributor
-                  introductions, and market exploration projects.
-                </p>
-              </div>
-              <ul className="tag-cloud">
-                {additionalBrands.map((brand) => (
-                  <li key={brand}>{brand}</li>
-                ))}
-                <li className="tag-more">And more…</li>
-              </ul>
             </div>
           </div>
         </section>
